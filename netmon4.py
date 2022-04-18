@@ -43,7 +43,7 @@ def mon():
 def ss():
     print("Running save scan!")
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        for ip in range(24):
+        for ip in range(254):
             host_ip = ipz+str(ip)
             checker = executor.submit(check, host_ip)
             isAlive = checker.result()
