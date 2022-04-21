@@ -73,7 +73,10 @@ def mon():
             print(f"{Fore.BLUE}|[{Fore.RED}DEAD{Fore.BLUE}] {Fore.YELLOW}{dh}")
         print(Fore.BLUE+"="*40)
         for nh in new_device:
-            print(f"{Fore.BLUE}|[{Fore.CYAN}NEW!{Fore.BLUE}] {Fore.YELLOW}{nh}")
+            if nh in live_hosts or nh in dead_hosts:
+                pass
+            else:
+                print(f"{Fore.BLUE}|[{Fore.CYAN}NEW!{Fore.BLUE}] {Fore.YELLOW}{nh}")
         print(Fore.BLUE+"="*40)
         print("|  BY: Anikin Luke Abales <|> Ph-Fox ")        
         print(Fore.BLUE+"="*40)
